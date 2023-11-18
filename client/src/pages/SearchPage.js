@@ -19,7 +19,7 @@ const SearchPage = () => {
   useEffect(()=>{
     const fetchData = async ()=>{
       setLoading(true)
-      const res = await axios.get(`http://localhost:5000/item/products?title=${location}&sort=-createdAt`)
+      const res = await axios.get(`https://afro-store-server.vercel.app/item/products?title=${location}&sort=-createdAt`)
       setSearch(res.data.product)
       setLoading(false)
     }

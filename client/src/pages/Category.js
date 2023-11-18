@@ -21,7 +21,7 @@ const Category = () => {
     const fetchData = async ()=>{
       try {
         setLoading(true)
-        const res = await axios.get(`http://localhost:5000/item/products?category=${location}&sort=-createdAt`)
+        const res = await axios.get(`https://afro-store-server.vercel.app/item/products?category=${location}&sort=-createdAt`)
         setCategory(res.data.product)
         setCount(res.data.count)
         setLoading(false)

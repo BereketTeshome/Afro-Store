@@ -19,7 +19,7 @@ const Favorites = () => {
     const getProducts = async ()=>{
       try {
         // setLoading(true)
-        const res = await axios.get("http://localhost:5000/item/products")
+        const res = await axios.get("https://afro-store-server.vercel.app/item/products")
         setProducts(res.data.product)
         // setLoading(false)
       } catch (error) {

@@ -18,7 +18,7 @@ const Uploads = () => {
   useEffect(()=>{
     const fetchData = async ()=>{
       setLoading(true)
-      const res = await axios.get(`http://localhost:5000/item/products`)
+      const res = await axios.get(`https://afro-store-server.vercel.app/item/products`)
       setProducts(res.data.product)
       setLoading(false)
     }
@@ -26,7 +26,7 @@ const Uploads = () => {
   },[])
 
   const handleDelete = async(id)=>{
-    await axios.delete(`http://localhost:5000/item/product/${id}`)
+    await axios.delete(`https://afro-store-server.vercel.app/item/product/${id}`)
     window.location.reload()
   }
 

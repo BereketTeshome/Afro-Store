@@ -17,7 +17,7 @@ const Login = () => {
         try {
           e.preventDefault()
           setLoading(true)
-         const res = await axios.post("http://localhost:5000/user/login", {email, password})
+         const res = await axios.post("https://afro-store-server.vercel.app/user/login", {email, password})
          setLoading(false)
          cookie.set("token", res.data.token)
          navigate('/')

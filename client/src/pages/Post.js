@@ -85,7 +85,7 @@ const Post = () => {
   const post = async(e)=>{
     e.preventDefault()
     try {
-      await axios.post("http://localhost:5000/item/product", {...values, img: img, createdBy: decode.userId})
+      await axios.post("https://afro-store-server.vercel.app/item/product", {...values, img: img, createdBy: decode.userId})
       navigate("/")
     } catch (error) {
       setError(true)

@@ -15,7 +15,7 @@ useEffect(()=>{
   const getProducts = async ()=>{
     try {
       setLoading(true)
-      const res = await axios.get("http://localhost:5000/item/products?sort=-createdAt")
+      const res = await axios.get("https://afro-store-server.vercel.app/item/products?sort=-createdAt")
       console.log(res.data);
       setProducts(res.data.product)
       setLoading(false)

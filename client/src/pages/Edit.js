@@ -85,7 +85,7 @@ const Edit = () => {
   const post = async(e)=>{
     e.preventDefault()
     try {
-      await axios.put(`http://localhost:5000/item/product/${id}`, {...values,
+      await axios.put(`https://afro-store-server.vercel.app/item/product/${id}`, {...values,
        img: img.length === 0 ? getValues.img : img,
        title: !values.title ? getValues.title : values.title,
        price: !values.price ? getValues.price : values.price,
@@ -104,7 +104,7 @@ const Edit = () => {
   const newProgress = Math.floor(progress)
   useEffect(()=>{
     const fetchValues = async ()=>{
-        const res = await axios.get(`http://localhost:5000/item/product/${id}`)
+        const res = await axios.get(`https://afro-store-server.vercel.app/item/product/${id}`)
         setGetValues(res.data.product)
     }
     fetchValues()

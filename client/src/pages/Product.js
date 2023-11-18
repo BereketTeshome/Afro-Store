@@ -23,7 +23,7 @@ const Product = () => {
         const getProducts = async ()=>{
           try {
             setLoading(true)
-            const res = await axios.get(`http://localhost:5000/item/product/${location}`)
+            const res = await axios.get(`https://afro-store-server.vercel.app/item/product/${location}`)
             setProduct([res.data.product])
             setLoading(false)
           } catch (error) {
