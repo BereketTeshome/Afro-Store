@@ -2,9 +2,7 @@ const User = require("../models/User")
 
 const register = async(req, res)=>{
     try {
-        const {name, email, password } = req.body
         const user = await User.create(req.body)
-
         const token = user.createToken()
         res.cookie('token', token);
         res.status(201).json({user, token})
